@@ -1,0 +1,28 @@
+RewriteEngine On
+
+ 
+# Match URLs for service-details.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^service/([a-zA-Z0-9-/]+)$ service-details.php?detail=$1 [L]
+
+# RewriteRule ^service/([0-9]+)/?$ /service-details.php?detail=$1
+
+
+
+# Match URLs for blogs-details.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9-/]+)$ blogs-details.php?alias=$1 [L]
+
+
+
+# Handle other cases where the file exists
+
+
+
+
+
+
+
+
